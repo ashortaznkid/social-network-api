@@ -8,9 +8,10 @@ const {
     deleteThought,
     addReaction,
     deleteReaction,
+    deleteAll,
 } = require('../../controllers/thoughtController');
 
-router.route('/').get(getThought).post(createthought);
+router.route('/').get(getThought).post(createthought).delete(deleteAll);
 
 router.route('/:thoughtId')
 .get(getSingleThought)
